@@ -253,7 +253,7 @@ class CalendarController<T> {
   /// Navigates to previous calendar page
   void previousPage({
     Duration duration = const Duration(milliseconds: 350),
-    Curve curve = Curves.decelerate,
+    Curve curve = Curves.easeOut,
   }) {
     _pageController.previousPage(duration: duration, curve: curve);
   }
@@ -261,7 +261,7 @@ class CalendarController<T> {
   /// Navigates to next calendar page
   void nextPage({
     Duration duration = const Duration(milliseconds: 350),
-    Curve curve = Curves.decelerate,
+    Curve curve = Curves.easeOut,
   }) {
     _pageController.nextPage(duration: duration, curve: curve);
   }
