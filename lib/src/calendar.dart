@@ -785,7 +785,6 @@ class _TableCalendarState extends State<TableCalendar>
       try{
         markerColor = event.badgeColor;
       }catch(_){}
-
       return Container(
         width: 8.0,
         height: 8.0,
