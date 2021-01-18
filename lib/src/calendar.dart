@@ -778,9 +778,6 @@ class _TableCalendarState extends State<TableCalendar>
   }
 
   Widget _buildMarker(DateTime date, ListViewBadgeModel event) {
-    print("event.badgeColor -------------------");
-    print("${event.badgeColor}");
-    print("event.badgeColor -------------------");
     if (widget.builders.singleMarkerBuilder != null) {
       return widget.builders.singleMarkerBuilder(context, date, event);
     } else {
