@@ -777,7 +777,7 @@ class _TableCalendarState extends State<TableCalendar>
     }
   }
 
-  Widget _buildMarker(DateTime date, dynamic event) {
+  Widget _buildMarker(DateTime date, ListViewBadgeModel event) {
     if (widget.builders.singleMarkerBuilder != null) {
       return widget.builders.singleMarkerBuilder(context, date, event);
     } else {
@@ -787,7 +787,8 @@ class _TableCalendarState extends State<TableCalendar>
         margin: const EdgeInsets.symmetric(horizontal: 0.3),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: widget.calendarStyle.markersColor,
+          // color: widget.calendarStyle.markersColor,
+          color: event.badgeColor,
         ),
       );
     }
