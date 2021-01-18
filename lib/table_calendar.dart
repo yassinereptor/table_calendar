@@ -6,7 +6,6 @@ library table_calendar;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_gesture_detector/simple_gesture_detector.dart';
-import 'package:table_calendar/src/models/listview_badge_model.dart';
 
 part 'src/calendar.dart';
 part 'src/calendar_controller.dart';

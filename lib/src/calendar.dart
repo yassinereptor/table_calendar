@@ -777,18 +777,22 @@ class _TableCalendarState extends State<TableCalendar>
     }
   }
 
-  Widget _buildMarker(DateTime date, ListViewBadgeModel event) {
+  Widget _buildMarker(DateTime date, dynamic event) {
     if (widget.builders.singleMarkerBuilder != null) {
       return widget.builders.singleMarkerBuilder(context, date, event);
     } else {
+      Color markerColor = widget.calendarStyle.markersColor;
+      try{
+        markerColor = event.badgeColor;
+      }catch(_){}
+
       return Container(
         width: 8.0,
         height: 8.0,
         margin: const EdgeInsets.symmetric(horizontal: 0.3),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          // color: widget.calendarStyle.markersColor,
-          color: event.badgeColor,
+          color: markerColor,
         ),
       );
     }
