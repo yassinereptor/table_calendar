@@ -397,11 +397,11 @@ class _TableCalendarState extends State<TableCalendar>
           onTap: _onHeaderTapped,
           onLongPress: _onHeaderLongPressed,
           child: Text(
-            widget.headerStyle.titleTextBuilder != null
+            (widget.headerStyle.titleTextBuilder != null
                 ? widget.headerStyle.titleTextBuilder(
                     widget.calendarController.focusedDay, widget.locale)
                 : DateFormat.yMMMM(widget.locale)
-                    .format(widget.calendarController.focusedDay),
+                    .format(widget.calendarController.focusedDay)).toEnglishDigit(),
             style: widget.headerStyle.titleTextStyle,
             textAlign: widget.headerStyle.centerHeaderTitle
                 ? TextAlign.center

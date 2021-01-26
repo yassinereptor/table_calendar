@@ -95,6 +95,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0-nullsafety.1"
+  persian_number_utility:
+    dependency: transitive
+    description:
+      name: persian_number_utility
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.7"
   simple_gesture_detector:
     dependency: transitive
     description:
